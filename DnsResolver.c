@@ -4,21 +4,21 @@
 
 int main(int argc, char **argv){
 
-    char *ip;
-    ip = argv[1];
+    char *host;
+    host = argv[1];
 
     if(argc < 2){
         printf("Dns Resolver\n");
         printf("Usage: ./program target\n");
     }
     else{
-        struct hostent *target = gethostbyname(ip); // get hostname
+        struct hostent *target = gethostbyname(host); // get hostname
         if(!target){
             printf("ERROR\n");
         }
         else{
-            char *host = inet_ntoa(*(struct in_addr *)target->h_addr);// convert to host in ip address
-            printf("IP: %s\n", host); 
+            char *ip = inet_ntoa(*(struct in_addr *)target->h_addr);// convert to host in ip address
+            printf("IP: %s\n", ip); 
         }
     }
     return 0;
