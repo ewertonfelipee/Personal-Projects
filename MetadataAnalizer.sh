@@ -6,7 +6,7 @@ then
     echo "Usage: ./metadataanalizer target filetype"
   
 else
-  lynx --dump "www.google.com/search?&q=site:$1+ext:$2" | grep ".$2" | cut -d "=" -f 2 | egrep -v "site|google" | sed 's/...$//' > metadata
+  lynx --dump "www.google.com/search?&q=site:$1+filetype:$2" | grep ".$2" | cut -d "=" -f 2 | egrep -v "site|google" | sed 's/...$//' > metadata
   
   for url in $(cat metadata)
   do
