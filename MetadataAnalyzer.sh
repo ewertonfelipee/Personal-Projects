@@ -2,8 +2,8 @@
 
 if [ "$1" == "" ]
 then
-    echo "MetaData Analyzer"
-    echo "Usage: ./metadataanalizer target filetype"
+    echo "MetaData Analyzer - EWERTON FELIPE"
+    echo "Usage: ./metadataanalyzer target filetype"
   
 else
   lynx --dump "www.google.com/search?&q=site:$1+filetype:$2" | grep ".$2" | cut -d "=" -f 2 | egrep -v "site|google" | sed 's/...$//' > metadata
