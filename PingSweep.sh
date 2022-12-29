@@ -2,7 +2,7 @@
 
 if [ "$1" == "" ]
 then
-echo "Ping Sweep"
+    echo "Ping Sweep"
     echo "Usage: $0 NETWORK"
     echo "Example: $0 192.168.0"
 else
