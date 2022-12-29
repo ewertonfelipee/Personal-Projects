@@ -4,7 +4,7 @@ res = dns.resolver.Resolver()
 file = open("/file/path/", "r")
 for subdomain in file.read().splitlines():
 
-    target = subdomain + ".URL"
+    target = subdomain + ".domain"
 
     try:
         result = res.resolve(target, "A")
