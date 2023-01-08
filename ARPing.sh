@@ -2,7 +2,7 @@
 
 if [ "$1" == "" ]
 then
-    echo "ARPing Sweep"
+    echo "ARPing Sweep - EWERTON FELIPE"
     echo "Necessary root mode"
     echo "Usage: $0 NETWORK INTERFACE"
     echo "Example: $0 192.168.0 eth0"
