@@ -3,13 +3,22 @@
 if [ "$1" == "" ]
 then
     echo "ARPing Sweep"
-    echo "Usage: $0 NETWORK interface"
+    echo "Necessary root mode"
+    echo "Usage: $0 NETWORK INTERFACE"
     echo "Example: $0 192.168.0 eth0"
-    echo "Uses in root mode"
+    
 else
-for host in {1..254};
+for host in $(seq 1 255);
 do
-arping -c 1 -i $2 $1.$host | grep "60 bytes"
+
+var=$(arping -c 1 -w1 -i $2 $1.$host | grep "60 bytes" | cut -d " " -f5 | sed 's/)://' | sed 's/(//')
+if [ "$var" != "" ]
+then
+echo "Active IP:$var"
+else
+continue
+fi
+
 done
 
 fi
