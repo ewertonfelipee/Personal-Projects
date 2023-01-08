@@ -5,7 +5,7 @@ then
     echo "ARPing Sweep - EWERTON FELIPE"
     echo "Necessary root mode"
     echo "Usage: $0 NETWORK INTERFACE"
-    echo "Example: $0 192.168.0 eth0"
+    echo "Example: $0 127.0.0.1 lo"
     
 else
 for host in $(seq 1 255);
