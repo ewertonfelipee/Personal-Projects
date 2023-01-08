@@ -4,7 +4,7 @@ if [ "$1" == "" ]
 then
     echo "Ping Sweep"
     echo "Usage: $0 NETWORK"
-    echo "Example: $0 192.168.0"
+    echo "Example: $0 127.0.0.1"
 else
 for host in {1..254};
 do
