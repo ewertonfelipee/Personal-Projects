@@ -3,7 +3,7 @@ import socket, sys
 
 def pop_enum():
   ip = sys.argv[1]
-  port = int(sys.argv[2])
+  port = 110
 
   client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
   client.connect((ip, port))
@@ -11,8 +11,8 @@ def pop_enum():
   banner = client.recv(1024)
   print(banner)
 
-  client.send(b"USER xxxx\r\n")
-  client.send(b"PASS xxxx\r\n")
+  client.send(b"USER camila\r\n")
+  client.send(b"PASS ca123456\r\n")
 
   user = client.recv(1024)
   passwd = client.recv(1024)
@@ -42,7 +42,7 @@ def pop_enum():
   
 if len(sys.argv) < 3:
 
-  print(f"usage mode: python3 {sys.argv[0]} host port")
+  print(f"usage mode: python3 {sys.argv[0]} host 110")
   
 else:
   pop_enum()
