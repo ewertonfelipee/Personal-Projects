@@ -40,7 +40,7 @@ def pop_enum():
 
   client.close()
   
-if len(sys.argv) < 3:
+if len(sys.argv) != 3:
 
   print(f"usage mode: python3 {sys.argv[0]} host 110")
   
