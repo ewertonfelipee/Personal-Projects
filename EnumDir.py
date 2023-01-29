@@ -18,13 +18,8 @@ extension = str(input("Enter with the extension of wordlist directories: "))
 for dir in directories:
 
     dir_enum = f"http://{url}/{dir}.{extension}" 
-
     r = requests.get(dir_enum)
-
     if r.status_code==404: 
-
         pass
-
     else:
-
         print("Valid directory:", dir_enum)
