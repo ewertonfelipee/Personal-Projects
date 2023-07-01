@@ -4,3 +4,9 @@
 [submodule "CG-LabProj"]
 	path = CG-LabProj
 	url = https://github.com/ewertonfelipee/CG-LabProj.git
+[submodule "Proj-IA"]
+	path = Proj-IA
+	url = https://github.com/ewertonfelipee/Proj-IA.git
+[submodule "Projeto-Redes"]
+	path = Projeto-Redes
+	url = https://github.com/ewertonfelipee/Projeto-Redes.git
